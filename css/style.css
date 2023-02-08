@@ -1,0 +1,107 @@
+@import "./style-aside.css";
+@import "./style-content.css";
+
+:root {
+  --accent: #596D48;
+  --accent-hover: #4A5B3C;
+  --body-background: #F1F2F3;
+  --logo-container-background: rgba(0,0,0,0.45);
+  --logo-text: #fff;
+  --body-text: #444;
+  --credits-text: rgba(255,255,255,0.5);
+  --footer-text: #666;
+  --header-height: 0px;
+  --footer-height: 0px;
+  --content-body-background: #fff;
+  --button-text: #fff;
+  --input-border-color: #E5E7EB;
+  --subtle-gray: #bbb;
+  --h1-size: 1.3rem;
+  --h2-size: 1.2rem;
+  --h3-size: 1.2rem;
+  --h4-size: 1.1rem;
+  --small-size: 0.9rem;
+}
+
+@font-face {
+  font-family: 'Lemon';
+  src: url(../fonts/Lemon-Regular.ttf) format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'PTSansNarrow';
+  src: url(../fonts/PTSansNarrow-Regular.ttf) format('truetype');
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: 'Lato';
+  src: url(../fonts/Lato-Regular.ttf) format('truetype');
+  font-weight: 400;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--body-background);
+  font-family: 'Lato', sans-serif;
+  font-display: swap;
+  color: var(--body-text);
+}
+
+h1 {
+  font-size: var(--h1-size);
+  line-height: 1.6rem;
+}
+
+h2 {
+  font-size: var(--h2-size);
+  line-height: 1.5rem;
+}
+
+h3 {
+  font-size: var(--h3-size);
+  line-height: 1.5rem;
+}
+
+h4 {
+  font-size: var(--h4-size);
+}
+
+small {
+  font-size: var(--small-size);
+}
+
+em {
+  font-style: italic;
+}
+
+main {
+  display: grid;
+  grid-template-columns: minmax(320px, 2fr) 3fr;
+  height: 100vh;
+}
+
+@media (max-width: 789px) {
+  main {
+    grid-template-columns: 1fr;
+    grid-template-rows: 250px auto;
+  }
+  aside {
+    padding-top: 10%;
+  }
+  .form-footer {
+    text-align: center;
+  }
+  button {
+    width: 100%;
+  }
+  .login_image {
+    display: none;
+  }
+  #login_form .input-fields {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+}

@@ -1,0 +1,169 @@
+.content-header {
+  padding: 30px;
+}
+
+.content-header {
+  max-width: 480px;
+}
+
+.content-header h2 {
+  margin-bottom: 25px;
+}
+
+#signup_form {
+  display: grid;
+  grid-template-rows: 1fr auto auto;
+}
+
+.form-main {
+  padding: 25px 30px 50px 30px;
+  background-color: var(--content-body-background);
+  box-shadow: 1px 5px 5px var(--subtle-gray);
+}
+
+.form-footer {
+  padding: 30px;
+  margin-bottom: 30px;
+}
+
+.form-footer small {
+  display: block;
+  margin-top: 25px;
+}
+
+.form-footer a {
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.form-footer a:hover {
+  color: var(--accent-hover);
+}
+
+
+/* FORM CONTROLS */
+
+input, label {
+  display: block;
+}
+
+.input-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 28px;
+  margin-top: 25px;
+  max-width: min(580px, 100%);
+}
+
+label {
+  font-family: 'PTSansNarrow', sans-serif;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  padding-bottom: 3px;
+}
+
+input {
+  border: 1px solid var(--input-border-color);
+  border-radius: 5px;
+  width: 97%;
+  padding: 8px;
+}
+
+input::placeholder {
+  color: var(--subtle-gray);
+}
+
+.input-group {
+  position: relative;  
+}
+
+img.check {
+  position: absolute;
+  bottom: 10px;
+  right: 0;
+  z-index: 1;
+  width: 14px;
+  height: 14px;
+  opacity: 0;
+}
+
+.incorrect {
+  position: absolute;
+  font-size: 0.75em;
+  color: red;
+  padding-top: 4px;
+  opacity: 0;
+}
+
+input:focus {
+  border: 1px solid blue;
+  box-shadow: 1px 1px 5px var(--subtle-gray);
+}
+
+input:not(:placeholder-shown):invalid {
+  background: rgba(255,0,0,0.1);
+  border: 1px solid red;
+}
+
+input:not(:placeholder-shown):valid {
+  background: rgba(34,139,34,0.05);
+  border: 1px solid green;
+}
+
+input:not(:placeholder-shown):valid +img.check {
+  opacity: 1;
+}
+
+input[type="text"]:not(:placeholder-shown):invalid ~.incorrect {
+  opacity: 1;
+}
+
+input[type="email"]:not(:placeholder-shown):not(:focus):invalid ~.incorrect, input[type="tel"]:not(:placeholder-shown):not(:focus):invalid ~.incorrect {
+  opacity: 1;
+}
+
+.forced-invalid {
+  border: 1px solid red!important;
+}
+
+button {
+  background: transparent;
+  background-color: var(--accent);
+  color: var(--button-text);
+  font-size: 0.9rem;
+  padding: 10px 50px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+}
+
+.error_message {
+  position: absolute;
+  font-size: 0.75em;
+  color: red;
+  padding-top: 4px;
+}
+
+
+#login_form .form-main {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+#login_form .input-fields {
+  width: 100%;
+  grid-template-columns: auto;
+  grid-template-rows: auto;
+  align-items: start;
+}
+
+.login_image {
+  width: 100%;
+  max-width: 250px;
+  height: auto;
+}

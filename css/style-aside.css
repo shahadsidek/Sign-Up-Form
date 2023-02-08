@@ -1,0 +1,47 @@
+aside {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 25px;
+  align-content: space-between;
+  padding: 108px 0 30px 0;
+  background-image: url('../images/tom-barrett-M0AWNxnLaMw-unsplash.jpg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+aside.login {
+  background-image: url('../images/sam-hull-KCJKsJPe9pQ-unsplash.jpg');
+}
+
+.logo_container {
+  background-color: var(--logo-container-background);
+}
+
+.logo_container a{
+  display: grid;
+  grid-template-columns: auto auto;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding: 30px 20px;
+  color: var(--logo-text);
+  text-decoration: none;
+}
+
+.logo_container h1 {
+  font-family: 'Lemon', sans-serif;
+  text-transform: uppercase;
+  padding: 0;
+  margin: 0;
+}
+
+.credits {
+  text-align: center;
+  padding: 10px;
+  color: var(--credits-text);
+}
+
+.credits a {
+  color: inherit;
+}

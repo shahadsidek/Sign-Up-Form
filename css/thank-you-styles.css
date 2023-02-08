@@ -1,0 +1,36 @@
+.container {
+    display: grid;
+    grid-template-rows: 90vw, 90vw, 90vw, 90vw;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+.thankyou-img {
+    align-items: center;
+    justify-content: center;
+}
+
+.center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.thank-you-title {
+    font-size: 2em;
+}
+
+.thank-you-description {
+    font-size: 1.2em;
+    padding-bottom: 15px;
+}
+
+.thank-you-contactus {
+    padding-top: 1em;
+}
+
+.thank-you-contactus a {
+  color: var(--accent);
+  text-decoration: none;
+}

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/png" href="./images/favicon.png">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="./js/script.js" defer></script>
+  <title>Paradise Travel Agency - Signup</title>
+</head>
+<body>
+  <main>
+    <aside>
+      <section class="logo_container">
+        <a href="./">
+          <img src="./images/logo.svg" width="70" height="70" alt="Visit Manarola Logo">
+          <h1>PARADISE TRAVEL AGENCY</h1>
+        </a>
+      </section>
+      <section class="credits">
+        <small>Photo by <a href="https://unsplash.com/ja/@wistomsin?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Tom Barrett</a> on <a href="https://unsplash.com/images/travel?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText" target="_blank">Unsplash</a></small>
+      </section>
+    </aside>
+    <article class="content">
+      <section class="content-header">
+        <h2>Sign up with Paradise Travel Agency <em>today</em> and let us guide you on a journey that you will never forget.</h2>
+        <h3>You know you want to.</h3>
+      </section>
+      <section>
+        <form action="./thankyou.html" method="get" id="signup_form">
+          <div class="form-main">
+            <h4>Let's do this!</h4>
+            <div class="input-fields">
+              <div class="input-group">
+                <label for="first_name">First Name*</label>
+                <input
+                  type="text"
+                  name="first_name"
+                  id="first_name"
+                  pattern="^[a-zA-Z]{2,}\s?([a-zA-Z]{2,})?"
+                  title="Min. 2 letters. White space allowed once."
+                  autocomplete="off"
+                  placeholder="Min. 2 letters. White space allowed once."
+                  required>
+                  <img src="./images/check.svg" alt="Valid icon" class="check">
+                  <small class="incorrect">* Please type only letters (min. 2 letters)</small>
+              </div>
+              <div class="input-group">
+                <label for="last_name">Last Name*</label>
+                <input
+                  type="text"
+                  name="last_name"
+                  id="last_name"
+                  pattern="^[a-zA-Z]{2,}"
+                  title="Min. 2 letters. No white space allowed."
+                  autocomplete="off"
+                  placeholder="Min. 2 letters. No white space allowed."
+                  required>
+                  <img src="./images/check.svg" alt="Valid icon" class="check">
+                  <small class="incorrect">* Please type only letters (min. 2 letters)</small>
+              </div>
+              <div class="input-group">
+                <label for="email">Email*</label>
+                <input
+                  type="email"
+                  name="email_field"
+                  id="email"
+                  pattern="(?![_.-])((?![_.-][_.-])[a-zA-Z\d_.-]){0,63}[a-zA-Z\d]@((?!-)((?!--)[a-zA-Z\d-]){0,63}[a-zA-Z\d]\.){1,2}([a-zA-Z]{2,14}\.)?[a-zA-Z]{2,14}"
+                  inputmode="email"
+                  autocomplete="off"
+                  placeholder="yourname@domain.com"
+                  required>
+                  <img src="./images/check.svg" alt="Valid icon" class="check">
+                  <small class="incorrect">* Please enter valid email address</small>
+              </div>
+              <div class="input-group">
+                <label for="phone_number">Phone Number (optional)</label>
+                <input
+                  type="tel"
+                  minlength="7"
+                  maxlength="32"
+                  pattern="^(\+|00)[1-9][0-9 \-\(\)\.]{7,32}$"
+                  title="Please enter valid a phone number"
+                  name="phone_number"
+                  id="phone_number"
+                  autocomplete="off"
+                  placeholder="+CountryCode AreaCode PhoneNumber">
+                  <img src="./images/check.svg" alt="Valid icon" class="check">
+                  <small class="incorrect">* Please enter a valid phone number</small>
+              </div>
+              <div class="input-group">
+                <label for="password">Password*</label>
+                <input
+                  type="password"
+                  name="password"
+                  id="password"
+                  placeholder="Min.8 - Max.20 characters"
+                  minlength="8"
+                  maxlength="20"
+                  required>
+                  <img src="./images/check.svg" alt="Valid icon" class="check">
+                <small class="error_message"></small>
+              </div>
+              <div class="input-group">
+                <label for="confirm_password">Confirm Password*</label>
+                <input
+                  type="password"
+                  name="confirm_password"
+                  id="confirm_password"
+                  placeholder="Min.8 - Max.20 characters"
+                  minlength="8"
+                  maxlength="20"
+                  required>
+                  <img src="./images/check.svg" alt="Valid icon" class="check">
+              </div>
+            </div>
+          </div>
+          <div class="form-footer">
+            <button>Create Account</button>
+            <small>Already have an account? <a href="login.html">Log in</a></small>
+          </div>
+        </form>
+      </section>
+    </article>
+  </main>
+</body>
+</html>
